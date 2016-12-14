@@ -65,6 +65,7 @@ def make_a_selection(files, string):
 		open_file = open(file, 'r')
 		if open_file.read().find(string) != -1:
 			suitable_files.append(file)
+		open_file.close()
 	check_result(suitable_files)
 	return suitable_files
 
